@@ -178,8 +178,7 @@ def setup_parser() -> argparse.ArgumentParser:
     sdxl_train_util.add_sdxl_training_arguments(parser)
     return parser
 
-
-if __name__ == "__main__":
+def main():
     parser = setup_parser()
 
     args = parser.parse_args()
@@ -187,3 +186,6 @@ if __name__ == "__main__":
 
     trainer = SdxlNetworkTrainer()
     trainer.train(args)
+
+if __name__ == "__main__":
+    main()
